@@ -37,10 +37,10 @@ export const NewsLetter = (props: Props) => {
   }
   return (
     <section className="bg-primary text-white mt-20">
-      <div className="py-20 lg:py-32 max-w-7xl mx-auto max-lg:px-5 flex flex-col lg:flex-row justify-between items-center">
+      <div className="py-20 lg:py-32 max-w-7xl mx-auto max-lg:px-5 gap-y-10 flex flex-col lg:flex-row justify-between items-center">
         <div className="w-full">
           <div className="w-full lg:w-[85%] space-y-2">
-            <p className="text-5xl lg:text-6xl font-bold">
+            <p className="text-4xl lg:text-6xl font-bold">
               Did You Find Your Dream Home?
             </p>
             <p className="text-sm lg:text-base font-medium lg:w-11/12">
@@ -49,8 +49,8 @@ export const NewsLetter = (props: Props) => {
             </p>
           </div>
         </div>
-        <div className="w-full">
-          <div className="h-16 w-9/12 bg-white/40 relative flex items-center">
+        <div className="w-full max-lg:mx-auto ">
+          <div className="h-16 w-9/12 bg-white/40 relative flex items-center max-lg:mx-auto">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}

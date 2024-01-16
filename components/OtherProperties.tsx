@@ -72,7 +72,7 @@ function OtherProperties() {
   };
 
   return (
-    <section className="relative w-full my-20">
+    <section className="relative w-full my-16 lg:my-20">
       <div className="my-20 w-full ">
         <div className="max-w-max mx-auto text-center">
           <p className="text-2xl lg:text-3xl text-primary  font-semibold capitalize">
