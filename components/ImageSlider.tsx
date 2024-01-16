@@ -41,7 +41,7 @@ export const ImageSlider = ({ image }: Props) => {
 
   return (
     <div className="relative bg-zinc-100 group aspect-square overflow-hidden h-[400px] w-full">
-      <div className="absolute top-5 left-5 flex gap-x-4 z-[200]">
+      <div className="absolute top-5 left-5 flex gap-x-4 z-[20]">
         <Button className="bg-[#E2D9FA]  text-primary font-semibold text-xs px-4 py-0 hover:text-white">
           Rent
         </Button>
