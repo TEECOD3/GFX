@@ -50,7 +50,7 @@ export const NewsLetter = (props: Props) => {
           </div>
         </div>
         <div className="w-full max-lg:mx-auto ">
-          <div className="h-16 w-9/12 bg-white/40 relative flex items-center max-lg:mx-auto">
+          <div className="h-16 w-9/12 bg-white/40 relative flex items-center ">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
