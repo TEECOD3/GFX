@@ -3,28 +3,34 @@ import { ImageSlider } from "./ImageSlider";
 import { Button } from "./ui/button";
 import { Card, CardDescription, CardFooter } from "./ui/card";
 import { BathIcon, CarFrontIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
 
-type Props = {};
+type Props = {
+  houseDets: {
+    id: number;
+    image: StaticImageData[];
+    location: string;
+    price: string;
+    details: string;
+  };
+};
 
-export const House = (props: Props) => {
+export const House = ({ houseDets }: Props) => {
+  const { location, price, details } = houseDets;
   return (
     <Card className="w-full h-full shadow-xl">
-      <ImageSlider />
+      <ImageSlider image={houseDets.image} />
       <div className="p-4 flex flex-col gap-y-4">
         <div className="flex justify-between items-center">
           <div className="">
-            <p className="font-semibold text-gray-700 capitalize">
-              Estate in maitama
-            </p>
-            <CardDescription>
-              Lorem, ipsum dolor sit amet consectetur adip
-            </CardDescription>
+            <p className="font-semibold text-gray-700 capitalize">{location}</p>
+            <CardDescription>{details}</CardDescription>
           </div>
 
           <Button>view Details</Button>
         </div>
         <div className="font-semibold">
-          <p>N143,000</p>
+          <p>{price}</p>
         </div>
 
         <div className="w-full flex flex-wrap mt-4">

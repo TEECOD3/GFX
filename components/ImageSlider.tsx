@@ -17,7 +17,7 @@ type Props = {
 
 const ARR = [1, 2, 3, 4, 5, 6, 7];
 
-export const ImageSlider = (props: Props) => {
+export const ImageSlider = ({ image }: Props) => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   const [activeindex, setActiveIndex] = useState(0);
   const [slideConfig, setSlideConfig] = useState({
@@ -94,13 +94,13 @@ export const ImageSlider = (props: Props) => {
           },
         }}
       >
-        {ARR.map((image, i) => (
+        {image?.map((image, i) => (
           <SwiperSlide key={i}>
             <Image
               fill
               loading={"eager"}
               className="-z-10 h-full w-full object-cover object-center brightness-75"
-              src={sliderimage}
+              src={image}
               alt="sliderimage"
             />
           </SwiperSlide>
